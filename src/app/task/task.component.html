@@ -1,0 +1,11 @@
+<div class="task-container">
+    <h2>{{ websiteName }}</h2>
+    <input type="text" placeholder="Enter task name" [(ngModel)]="taskName">
+    <button (click)="addTask()">Add Task</button>
+    <div *ngFor="let task of tasks" class="d-flex">
+      <p>{{ task.taskName }}</p>
+      <!-- <button (click)="editTask(task)">Edit</button> -->
+      <button (click)="deleteTask(task.id)">Delete</button>
+    </div>
+  </div>
+  
